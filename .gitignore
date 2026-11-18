@@ -1,0 +1,12 @@
+# Foundry
+out/
+cache/
+broadcast/
+
+# Hardhat (deployment only)
+artifacts-hardhat/
+cache-hardhat/
+node_modules/
+
+# Secrets
+.env

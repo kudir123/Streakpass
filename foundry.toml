@@ -1,0 +1,14 @@
+[profile.default]
+src = "contracts"
+test = "test"
+out = "out"
+cache_path = "cache"
+libs = ["lib"]
+solc = "0.8.24"
+optimizer = true
+optimizer_runs = 200
+evm_version = "paris"
+
+# StreakPass is built and tested with Foundry (contracts + tests).
+# The Hardhat files (hardhat.config.js, scripts/deploy.js) exist for the
+# BSC deployment step only; they are not needed to run the test suite.
