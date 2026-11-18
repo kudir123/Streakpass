@@ -9,11 +9,10 @@
 - **Deployed code size:** 6,571 bytes — byte-identical size to the locally tested build
 - **Source verification:** Sourcify EXACT MATCH (creation + runtime), verified 2026-11-18T15:22:21Z, matchId 59474803 — https://sourcify.dev (contract 56/0x52Db78d410b35F2EedA89deed7a394641Da5aBa0). Sourcify's automatic propagation to Etherscan/BscScan failed on Sourcify's own daily submission quota; retry later or verify on BscScan directly with a free BscScan API key (hackathon asks for BscScan verification specifically).
 - **First live interaction:** agentic wallet (Agent ID kudirz92.ai) checkIn() tx 0x3f3a37ff7a0e102b22f990a37e096f855474bdba7f6f25bda7cc8dd621ffcf71 — status 0x1; getStats: streak 1, totalUsers 1. End-to-end product flow proven on mainnet.
-- **Frontend:** config.js now carries the deployed address. Hosting pending (GitHub Pages once the repo is public).
+- **Frontend:** config.js now carries the deployed address. Hosted on GitHub Pages from the public repo (main branch, /docs folder), enabled by Afriy 2026-11-18 ~22:54 WIB and verified live (HTTP 200): **https://kudir123.github.io/Streakpass/**
+- **Repository:** https://github.com/kudir123/Streakpass (public; pushed via the Muse GitHub App — snapshot sync record at ~/workspace/streakpass.muse-github-snapshot-sync.json)
 
 ## Pending
-1. BscScan verification (retry Sourcify→Etherscan propagation, or a free BscScan/Etherscan API key + `forge verify-contract --verifier etherscan` / hardhat verify).
-2. Public GitHub repo under kudir123 (needs Afriy: complete the pending GitHub App installation, or create the empty repo + add the VM deploy key).
-3. Frontend hosting (GitHub Pages from the repo).
-4. ≥30 Agent ID addresses interacting before 2026-12-09T08:00Z (Innovation eligibility).
-5. Hackathon submission (project name, website, contract address, Agent ID usage description, reward address).
+1. BscScan verification (retry Sourcify→Etherscan propagation, or a free BscScan/Etherscan API key + `forge verify-contract --verifier etherscan` / hardhat verify). Sourcify exact match already stands as public verification.
+2. ≥30 Agent ID addresses interacting before 2026-12-09T08:00Z (Innovation eligibility) — share the live site link.
+3. Hackathon submission (project name, website, contract address, Agent ID usage description, reward address).
