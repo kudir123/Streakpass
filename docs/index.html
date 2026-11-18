@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>StreakPass — the daily check-in passport for Agent ID holders</title>
+<meta name="description" content="StreakPass is a daily check-in passport on BNB Chain. Your Agent ID is the key: check in once a day, build a streak, earn soulbound badges." />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="hero">
+  <div class="logo" aria-hidden="true">
+    <svg width="54" height="54" viewBox="0 0 54 54"><rect x="3" y="3" width="48" height="48" rx="12" fill="#14213d"/><path d="M17 34c5-9 15-9 20 0" stroke="#f5b921" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="27" cy="20" r="5" fill="#f5b921"/></svg>
+  </div>
+  <h1>StreakPass</h1>
+  <p class="tagline">The daily check-in passport for Agent ID holders.</p>
+</header>
+
+<main>
+  <section class="card">
+    <h2>What is StreakPass?</h2>
+    <p>
+      StreakPass is a small on-chain ritual on BNB Chain. Your <strong>Agent ID</strong> is the
+      key: if your wallet holds one, you can check in <strong>once per UTC day</strong>. Check in
+      on consecutive days to build a <strong>streak</strong>; miss a day and the running streak
+      restarts (your best streak is kept). Reaching <strong>3, 7, 14 or 30 days</strong> mints a
+      <strong>soulbound badge</strong> — it lives in your wallet forever and can never be sold,
+      traded or transferred.
+    </p>
+    <p>
+      The contract has <strong>no owner and no admin functions</strong>: nobody can mint badges
+      by hand, pause the passport, or touch anyone's streak. The only way in is holding an
+      Agent ID and showing up.
+    </p>
+    <p class="risk">
+      Risk note: StreakPass badges are non-transferable collectibles with no monetary value.
+      StreakPass is not a financial product, promises no returns, and nothing here is financial
+      advice. Cryptocurrency activity always carries risk — never spend more than you can
+      afford to lose.
+    </p>
+  </section>
+
+  <section class="card" id="app">
+    <h2>Your passport</h2>
+    <p id="wallet-status" class="status">Wallet not connected.</p>
+    <button id="connect-btn" type="button">Connect wallet</button>
+    <button id="switch-btn" type="button" class="hidden">Switch to BNB Smart Chain</button>
+
+    <div id="passport" class="hidden">
+      <p class="status">Agent ID: <strong id="agentid-status">…</strong></p>
+      <div class="stats">
+        <div class="stat"><span id="stat-streak">–</span><label>Current streak (days)</label></div>
+        <div class="stat"><span id="stat-longest">–</span><label>Longest streak</label></div>
+        <div class="stat"><span id="stat-total">–</span><label>Total check-ins</label></div>
+        <div class="stat"><span id="stat-badges">–</span><label>Badges</label></div>
+      </div>
+
+      <h3>Badge shelf</h3>
+      <div id="badge-shelf" class="shelf"></div>
+
+      <button id="checkin-btn" type="button" disabled>Check in today</button>
+      <p id="checkin-note" class="status"></p>
+    </div>
+
+    <p id="deploy-note" class="status hidden">
+      The StreakPass contract is not deployed yet — this page is a live preview.
+      Stats and check-in activate as soon as the contract address is set in <code>config.js</code>.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>Everyone's streaks</h2>
+    <div class="stats">
+      <div class="stat"><span id="global-users">–</span><label>Passport holders checked in</label></div>
+      <div class="stat"><span id="global-checkins">–</span><label>Total check-ins</label></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>StreakPass runs on BNB Chain. An Agent ID is claimed inside the Binance app; StreakPass itself is an independent project and is not affiliated with Binance.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/ethers@6.13.4/dist/ethers.umd.min.js"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
